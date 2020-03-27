@@ -3,6 +3,8 @@ import Button from '../components/Button'
 import {connect} from 'react-redux'
 import {incrementCount, decrementCount} from '../actions/index'
 
+
+
 class CounterComponent extends Component{
 
 handleButtonActionIncrement = () => {
@@ -18,7 +20,7 @@ render() {
   const {count}=this.props
   return(
     <div>
-      <h1>Count: {count}</h1>
+      <h1 data-testid="count"> Count: {count}</h1>
       <Button action={this.handleButtonActionIncrement} buttonTitle = "+" />
       <Button action={this.handleButtonActionDecrement} buttonTitle = "-" />
     </div>
